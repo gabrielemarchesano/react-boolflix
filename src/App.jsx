@@ -29,11 +29,19 @@ function App() {
           <input type="text" placeholder="Cerca..." value={search} onChange={handleChange}/>
           <button type="submit" onClick={fetchMovies}>Cerca</button>
         </form>
-        <p>{search}</p>
+        {/* <p>{search}</p> */}
         <ul>
           {
             movies.map((movie) => (
-              <li>{movie.title}</li>
+              <li>
+                Title: {movie.title}
+                <br/>
+                Original title: {movie.original_title}
+                <br/>
+                Original language: {movie.original_language}
+                <br/>
+                Vote: {movie.vote_average}
+              </li>
             ))
           }
         </ul>
